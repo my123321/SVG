@@ -8,11 +8,14 @@
     <title>Document</title>
     <style>
         body {
-            margin: 0;
+            /* margin: 0; */
+            /* font-size: 0; */
+            /* background-color: greenyellow; */
         }
 
         svg {
             background-color: bisque;
+            vertical-align: top;
         }
 
         .box1,
@@ -20,10 +23,27 @@
         img {
             width: 200px;
             height: 200px;
+            vertical-align: top;
         }
 
         .box1 {
             background-color: pink;
+            position: relative;
+        }
+
+        .box1>.rect {
+            width: 100px;
+            height: 100px;
+            border-width: 50px;
+            border-style: solid;
+            border-color: #000;
+            background-color: aquamarine;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            /* box-sizing: border-box; */
         }
 
         .box2 {
@@ -41,15 +61,21 @@
 </head>
 
 <body>
-    <!-- 行内块 -->
+    <!-- 
+        1. 行内块 与img标签类似
+        2. 关于stroke-width 的表现
+        
+    -->
     <!-- <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="200">
         <circle cx="100" cy="100" r="40" stroke="black" stroke-width="2" fill="green" />
     </svg> -->
-
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="200" bgColor="green">
-        <rect x="50" y="50" width="100" height="100" style="fill:skyblue;" />
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="200">
+        <rect x="50" y="50" width="100" height="100" style="fill:skyblue;stroke-width:50;stroke:rgb(0,0,0)" />
     </svg>
-    <div class="box1"></div>
+
+    <div class="box1">
+        <!-- <div class="rect"></div> -->
+    </div>
     <img src="./photo2.webp" alt="">
     <div class="box2"></div>
 
