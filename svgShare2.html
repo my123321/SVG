@@ -36,6 +36,40 @@
         <polyline points="20,20 20,45 60,40 80,10 120,140 200,180" style="fill:none;stroke:black;stroke-width:3" />
     </svg>
 
+    <!-- 多边形 -->
+    <svg height="210" width="500">
+        <polygon points="200,10 250,190 160,210" style="fill: #e4ff00;stroke:purple;stroke-width:1" />
+    </svg>
+
+    <!-- 路径 -->
+    <!-- 1. 各个参数意义
+         2. 绝对距离、相对距离
+    -->
+    <!-- 
+        M = moveto 需要两个参数（x轴和y轴坐标，移动到的点的x轴和y轴的坐标
+        L = lineto 需要两个参数（x轴和y轴坐标），它会在当前位置和最新的位置（L前面画笔所在的点）之间画一条线段。
+        H = horizontal lineto 一个参数，标明在x轴移动到的位置，绘制水平线
+        V = vertical lineto 一个参数，标明在y轴移动到的位置，绘制垂直线
+        C = curveto 三次贝塞尔曲线,需要定义一个点和两个控制点，用C命令来创建
+        S = smooth curveto 简写的三次贝塞尔曲线
+        Q = quadratic Bézier curve 二次贝塞尔曲线
+        T = smooth quadratic Bézier curveto 
+        A = elliptical Arc 弧形
+        Z = closepath 从当前点画一条直线到路径的起点
+     -->
+    <!-- 绝对距离 -->
+    <svg width="200px" height="200px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 10 H 190 V 190 H 10 L 10 10" />
+    </svg>
+
+    <!-- 相对距离，用小写字母表示 -->
+    <svg width="100px" height="100px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 10 h 50 v 50 h -50 Z" />
+    </svg>
+
+    <svg width="200px" height="200px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 10 C 20 20, 40 20, 50 10" stroke="black" fill="transparent" />
+    </svg>
 </body>
 
 </html>
